@@ -9,7 +9,6 @@ class MyController extends Controller{
 		
 		$page = post('page');
 		$limit = 500;
-		$userid = json_decode(post('userid'));
 		
 		// 注入常量
 		$this->injection(MOD::$Er_User);
@@ -28,9 +27,9 @@ class MyController extends Controller{
 		$代金券 = $data[2];
 		
 		// 将用户id改为objectId并存入数组
-		/* $userid = array();
+		$userid = array();
 		foreach ($用户 as $k=>$v)
-			$userid[$v['序号']] = $this->createId(); */
+			$userid[$v['序号']] = $this->createId();
 		
 		foreach ($用户 as $k=>$v)
 		{			
